@@ -2,23 +2,28 @@ function toggleMenu() {
     document.querySelector(".menu-icon").classList.toggle("active");
     document.getElementById("sideMenu").classList.toggle("active");
 }
-let lastScrollTop = 0;
-const header = document.getElementById("navbar");
+const slider = document.querySelector('.product-slider');
 
-window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop && scrollTop > 50) {
-        // User is scrolling down, hide the header
-        header.style.transform = "translateY(-100%)";
-        header.style.opacity = "0";
-    } else {
-        // User is scrolling up, show the header
-        header.style.transform = "translateY(0)";
-        header.style.opacity = "1";
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative values
+// Pause animation on hover (desktop)
+slider.addEventListener('mouseenter', () => {
+    slider.style.animationPlayState = 'paused';
 });
 
-// Add event listener to the menu icon
+// Resume animation when mouse leaves
+slider.addEventListener('mouseleave', () => {
+    slider.style.animationPlayState = 'running';
+});
+
+// Pause animation on touch (mobile)
+slider.addEventListener('touchstart', () => {
+    slider.style.animationPlayState = 'paused';
+});
+
+// Resume animation when touch ends
+slider.addEventListener('touchend', () => {
+    slider.style.animationPlayState = 'running';
+});
+
+
+
+

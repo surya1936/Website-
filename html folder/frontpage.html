@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="frontpg.css">
     <link rel="stylesheet" href="gallery animi.css">
     <script src="Interaction.js"></script>
+    <!-- <script src="AI chat.js"></script> -->
 </head>
 
 <body>
 <!-- Header Section -->
-<header class="navbar">
+<header class="header">
+    <div class="navbar">
     <!-- Menu Icon -->
     <div class="menu-icon" onclick="toggleMenu()">
         <span></span>
@@ -57,6 +59,7 @@
             <a href="#">CART</a>
         </div>
     </div>
+</div>
 </header>
 
 
@@ -87,17 +90,19 @@
     <section class="featured">
         <h2>Featured</h2>
         <p>Our plants are 100% organic, we don't use pesticides or harmful chemicals. But please don’t eat them.</p>
-        <div class="featured-grid">
-            <div class="product">
-                <img src="im5.webp" alt="Plant 1">
-                <p>Plant 1 - 150€</p>
+        
+            <div class="product-slider">
+                <div class="product"><img src="im1.webp" alt="Product 1"></div>
+                <div class="product"><img src="im5.webp" alt="Product 2"></div>
+                <div class="product"><img src="img6.webp" alt="Product 3"></div>
+                <div class="product"><img src="image.webp" alt="Product 4"></div>
+                <!-- Duplicate images for seamless loop -->
+                <!-- <div class="product"><img src="" alt="Product 1"></div> -->
+                <div class="product"><img src="1m11.webp" alt="Product 2"></div>
+                <div class="product"><img src="1m13.webp" alt="Product 3"></div>
+                <div class="product"><img src="im12.webp" alt="Product 4"></div>
             </div>
-            <div class="product">
-                <img src="image.webp" alt="Plant 2">
-                <p>Plant 2 - 50€ <span class="sold-out">Sold Out</span></p>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Newsletter & Footer -->
     <section class="newsletter">
