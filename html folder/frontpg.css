@@ -111,7 +111,7 @@ body {
 }
 
 .side-menu ul li a:hover {
-    color: #ffcc00;
+    color: rgb(191, 216, 144);
 }
 .container-gallery{
     display: flex;
@@ -130,11 +130,12 @@ body {
 }
 .top-nav a {
     text-decoration: none;
-    font-size: 16px;
     font-weight: bold;
-    color: black;
     position: relative;
     padding-bottom: 5px;
+    color: black;
+    font-size: 18px;
+    font-family:sans-serif;
     display: inline-block; /*Ensures proper scaling */
     transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
@@ -155,7 +156,7 @@ body {
 /* Hover Effect: Expands underline & scales text */
 .top-nav a:hover {
     transform: scale(1.1); /* Text grows slightly */
-    color: #632222;
+    color: rgb(0, 0, 0);
 }
 
 .top-nav div {
@@ -169,12 +170,12 @@ body {
     margin-right: 5px;
 }
 
-.top-nav a {
+/* .top-nav a {
     text-decoration: none;
     color: black;
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-} 
+    font-family:sans-serif;
+}  */
 
 /* Hero Section */
 .hero {
@@ -224,18 +225,18 @@ body {
     font-family: serif;
     display: inline-block;
     padding: 10px 40px;
-    background: #ffcc00;
-    color: black;
+    background:rgb(191, 216, 144);
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background: black;
-    color: white;
+    background: rgb(123, 122, 122);
+    color: rgb(246, 241, 241);
 }
 .categories h2 {
     /* font-family: serif; */
@@ -331,13 +332,18 @@ body {
     }
 }
 
-.sold-out {
+/* .sold-out {
     background: rgb(4, 4, 4);
     color: white;
     padding: 2px 5px;
-}
+} */
 
 /* Newsletter */
+.newsletter button {  
+    background-color: rgb(191, 216, 144);
+    color: black;
+    border-radius: 5px;
+}
 .newsletter input {
     padding: 10px;
     margin: 10px;
@@ -345,14 +351,38 @@ body {
 .newsletter h2 {
     font-size: 50px;
     font-weight: lighter;
-    /* padding: 10px;
-    margin: 10px; */
+
 }
 
 /* Footer */
-footer {
+.foot {
     padding: 20px;
-    background: #fffdfd;
-    color: rgb(19, 17, 17);
+    background: #eae0e0;
+    color: #555;
+
+}
+
+.payment-methods {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.payment-methods img {
+    height: 30px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #777;
 }
 
