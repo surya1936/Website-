@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contact Us</h2><br>
+        <p id="contact-form">
+            <label for="name">Name:</label>
+            <p></p><input type="text" style ="width: 453px;" id="name" placeholder="Enter your name" required></p>
+            
+            <label for="phone">Mobile Number:</label>
+            <div style="display: flex; gap: 5px;">
+                
+                <style>
+                    .phone-container {
+                        display: flex;
+                        align-items: center; /* Align items vertically */
+                        gap: 8px; /* Space between dropdown and input */
+                    }
+                
+                        #country-code {
+                            height: 40px; /* Adjust height */
+                            padding: 5px ;
+                            font-size: 15px;
+                            margin-top: 8px;
+                    }
+                
+                    #phone {
+                        height: 40px;
+                        padding: 5px;
+                        font-size: 16px;
+                        width: 250px; /* Set width for uniformity */
+                    }
+                </style>
+                
+                <select id="country-code" style="width: 100px;">
+                    <option value="+1">United States (+1)</option>
+                    <option value="+44">United Kingdom (+44)</option>
+                    <option value="+91">India (+91)</option>
+                    <option value="+971">United Arab Emirates (+971)</option>
+                    <option value="+61">Australia (+61)</option>
+                    <option value="+81">Japan (+81)</option>
+                    <option value="+49">Germany (+49)</option>
+                    <option value="+33">France (+33)</option>
+                    <option value="+86">China (+86)</option>
+                    <option value="+7">Russia (+7)</option>
+                    <option value="+55">Brazil (+55)</option>
+                    <option value="+27">South Africa (+27)</option>
+                    <option value="+34">Spain (+34)</option>
+                    <option value="+39">Italy (+39)</option>
+                    <option value="+82">South Korea (+82)</option>
+                    <option value="+92">Pakistan (+92)</option>
+                    <option value="+20">Egypt (+20)</option>
+                    <option value="+52">Mexico (+52)</option>
+                    <option value="+62">Indonesia (+62)</option>
+                    <option value="+60">Malaysia (+60)</option>
+                    <option value="+63">Philippines (+63)</option>
+                    <option value="+31">Netherlands (+31)</option>
+                    <option value="+47">Norway (+47)</option>
+                    <option value="+46">Sweden (+46)</option>
+                    <option value="+41">Switzerland (+41)</option>
+                    <option value="+30">Greece (+30)</option>
+                    <option value="+90">Turkey (+90)</option>
+                    <option value="+66">Thailand (+66)</option>
+                    <option value="+358">Finland (+358)</option>
+                    <option value="+420">Czech Republic (+420)</option>
+                    <option value="+351">Portugal (+351)</option>
+                    <option value="+43">Austria (+43)</option>
+                    <option value="+48">Poland (+48)</option>
+                    <option value="+45">Denmark (+45)</option>
+                    <option value="+375">Belarus (+375)</option>
+                    <option value="+998">Uzbekistan (+998)</option>
+                    <option value="+380">Ukraine (+380)</option>
+                    <option value="+234">Nigeria (+234)</option>
+                    <option value="+964">Iraq (+964)</option>
+                    <option value="+92">Pakistan (+92)</option>
+                    <option value="+975">Bhutan (+975)</option>
+                    <option value="+972">Israel (+972)</option>
+                    <option value="+353">Ireland (+353)</option>
+                    <option value="+993">Turkmenistan (+993)</option>
+                    <option value="+992">Tajikistan (+992)</option>
+                    <option value="+856">Laos (+856)</option>
+                    <option value="+95">Myanmar (+95)</option>
+                    <option value="+213">Algeria (+213)</option>
+                    <option value="+233">Ghana (+233)</option>
+                    <option value="+254">Kenya (+254)</option>
+                    <option value="+964">Iraq (+964)</option>
+                    <option value="+374">Armenia (+374)</option>
+                    <option value="+993">Turkmenistan (+993)</option>
+                </select>
+                
+                
+                <input type="tel" style= "width:347px"id="phone" name="phone" placeholder="Enter number" required>
+            </div>
+            
+            <script>
+            document.getElementById("country-code").addEventListener("change", function() {
+                let code = this.value;
+                let phoneInput = document.getElementById("phone");
+                
+                if (!phoneInput.value.startsWith(code)) {
+                    phoneInput.value = code + " ";
+                }
+            });
+            </script>
+            <script>
+                document.getElementById("phone").addEventListener("input", function (event) {
+                    this.value = this.value.replace(/\D/g, ""); // Remove non-numeric characters
+                });
+                </script>
+            
+            
+            <label for="email">Email:</label><br>
+            <input type="email" style ="width: 450px;"id="email" placeholder="Enter your email" required>
+            
+            
+            <p><label for="message">Message:</label></p><br>
+            <textarea style="width : 450px; height: 150px;"id="message" placeholder="Write your message" required></textarea>
+            
+            <br><br><p><button style="width : 100px;" type="submit">Send Message</button></p>
+        </form>
+        <p id="response-message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
