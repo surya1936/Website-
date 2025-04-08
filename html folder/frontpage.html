@@ -7,6 +7,7 @@
     <title>Design & Printer Hub</title>
     <link rel="stylesheet" href="frontpg.css">
     <link rel="stylesheet" href="gallery animi.css">
+    
     <script src="Interaction.js"></script>
     <!-- <script src="AI chat.js"></script> -->
 </head>
@@ -26,10 +27,10 @@
     <nav class="side-menu" id="sideMenu">
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="/html folder/about/aboutpg.html/about.html">About</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <!-- <li><a href="#">Contact us</a></li> -->
+            <!-- <li><a href="#">Portfolio</a></li> -->
+            <li><a href="#">Contact us</a></li>
         </ul>
     </nav>
 
@@ -44,16 +45,38 @@
         </div>
         <div class="container-collection">
             <img src="order.png" alt="Products">
-            <a href="#">PRODUCTS</a>
+            <a href="/html folder/js/productpage/prod.html">PRODUCTS</a>
         </div>
         <div class="container-help">
             <img src="customer-service.png" alt="Help">
             <a href="Contact.html">CONTACT US</a>
         </div>
-        <div class="container-login">
+        <!-- <div class="container-login">
+            <img src="enter.png" alt="Login">
+            <a href="signup.html">LOGIN/SIGN IN</a>
+        </div> -->
+        <div class="container-login" id="user-display">
             <img src="enter.png" alt="Login">
             <a href="signup.html">LOGIN/SIGN IN</a>
         </div>
+        
+          
+          <script>
+            const userId = localStorage.getItem("user_id");
+            if (userId) {
+              const container = document.getElementById("login-section");
+              container.innerHTML = `
+                <img src="enter.png" alt="User">
+                <span>Welcome, ${userId}</span>
+                <button onclick="logout()">Logout</button>
+              `;
+            }
+          
+            function logout() {
+              localStorage.removeItem("user_id");
+              window.location.reload();
+            }
+          </script>
         <div class="container-cart">
             <img src="shopping-cart.png" alt="Cart">
             <a href="#">CART</a>
@@ -71,7 +94,7 @@
         </video>
         <div class="hero-content">
             <h1>print your vision with precision</h1>
-            <p>world's No.1 design & printing hub - where innovation meets perfection!</p>
+            <p>world's no.1 design & printing hub - where innovation meets perfection</p>
             <a href="#" class="btn">Shop Now</a>
         </div>
     </section>
@@ -145,6 +168,28 @@
             © 2013 - 2025 All Rights Reserved. Printful® Inc. 11025 Westlake Dr, Charlotte, North Carolina 28273
         </p>
     </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const user = localStorage.getItem("loggedInUser");
+            const userDisplay = document.getElementById("user-display");
+        
+            if (user) {
+                userDisplay.innerHTML = `
+                    <img src="user.png" alt="User" style="width: 40px; height: 40px; border-radius: 50%;">
+                    <span style="margin-left: 10px;">Welcome, ${user}</span>
+                    <button onclick="logout()" style="margin-left: 10px;">Logout</button>
+                `;
+            }
+        });
+        
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            window.location.reload();
+        }
+        </script>
+        
 
 </body>
 

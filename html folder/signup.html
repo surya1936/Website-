@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
+   <script src="animation.js"></script>
+    <script src="login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-
-    <div class="auth-container">
-        <h2 id="form-title">Login</h2>
-
-        <!-- LOGIN FORM -->
-        <form id="login-form">
-            <input type="email" id="login-email" placeholder="Enter your email" required>
-            <span id="login-email-error" class="error-message">Invalid or unregistered Email ID</span>
-
-            <input type="password" id="login-password" placeholder="Enter your password" required>
-
-            <button type="submit" class="auth-btn">Sign In</button>
-
-            <p class="toggle-text">
-                Don't have an account? <span id="toggle-signup">Sign Up</span>
-            </p>
-
-            <button type="button" class="google-btn" onclick="googleSignIn()">Sign in with Google</button>
-        </form>
-
-        <!-- SIGNUP FORM -->
-        <form id="signup-form" class="hidden">
-            <input type="text" id="signup-username" placeholder="Enter your username" required>
-            <span id="signup-username-error" class="error-message">Username must be at least 3 characters</span>
-
-            <input type="email" id="signup-email" placeholder="Enter your email" required>
-            <span id="signup-email-error" class="error-message">Please enter a valid Email ID</span>
-
-            <input type="password" id="signup-password" placeholder="Enter your password" required>
-
-            <button type="submit" class="auth-btn">Sign Up</button>
-
-            <p class="toggle-text">
-                Already have an account? <span id="toggle-login">Sign In</span>
-            </p>
-
-            <button type="button" class="google-btn" onclick="googleSignIn()">Sign up with Google</button>
-        </form>
+    <div class="container">
+        <div class="animation-container" id="animation-container"></div>
+        
+        <div class="login-form">
+            <h1>Welcome Back</h1>
+            
+            <div class="tabs">
+                <button class="tab-btn active" id="phone-tab">Phone</button>
+                <button class="tab-btn" id="email-tab">Email</button>
+            </div>
+            
+            <!-- Phone Login Form -->
+            <div class="form-container active" id="phone-form">
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter phone number" required>
+                    <button id="send-otp" class="btn-secondary">Send OTP</button>
+                </div>
+                
+                <div class="input-group otp-group hidden">
+                    <label for="otp">Enter OTP</label>
+                    <div class="otp-inputs">
+                        <input type="text" maxlength="1" class="otp-input" title="Enter OTP digit" >
+                        <input type="text" maxlength="1" class="otp-input"title="Enter OTP digit" >
+                        <input type="text" maxlength="1" class="otp-input"title="Enter OTP digit" >
+                        <input type="text" maxlength="1" class="otp-input"title="Enter OTP digit" >
+                        <input type="text" maxlength="1" class="otp-input"title="Enter OTP digit" >
+                        <input type="text" maxlength="1" class="otp-input"title="Enter OTP digit" >
+                    </div>
+                    <div class="timer" id="otp-timer">Expires in: <span>02:00</span></div>
+                </div>
+                
+                <a href="" title="Go to Product Page">
+                <button type="submit" id="verify-phone" class="btn-primary" >Log In</button>
+            </div>
+        </a>
+            <!-- Email Login Form -->
+            <div class="form-container" id="email-form">
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter email address" required>
+                </div>
+                
+                <button type="submit" id="verify-email" class="btn-primary">Send Verification Link</button>
+            </div>
+            
+            <div class="form-footer">
+                <p>Don't have an account? <a href="frontpage.html">Sign Up</a></p>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
-
+    <script src="animation.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

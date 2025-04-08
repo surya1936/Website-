@@ -2,10 +2,9 @@ function toggleMenu() {
     document.querySelector(".menu-icon").classList.toggle("active");
     document.getElementById("sideMenu").classList.toggle("active");
 }
-
 document.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
-    const header = document.querySelector(".header");
+    const header = document.querySelector("header");
 
     window.addEventListener("scroll", function () {
         let scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -43,6 +42,10 @@ slider.addEventListener('touchstart', () => {
 slider.addEventListener('touchend', () => {
     slider.style.animationPlayState = 'running';
 });
+
+
+
+
 
 
 
