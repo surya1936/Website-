@@ -92,7 +92,95 @@
         <textarea id="message" rows="5" required></textarea>
         <small class="error-message"></small>
       </div>
-      <button type="submit">Send</button>
+      <button class="noselect">
+        <span>Submit</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+        </svg>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+            }
+            
+            button {
+                width: 150px;
+                height: 50px;
+                background: none;
+                border: 4px solid #607b63;
+                border-radius: 50px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 100ms;
+            }
+            
+            span,
+            svg {
+                position: absolute;
+                color: #000000;
+                fill: transparent;
+                text-transform: uppercase;
+                
+                letter-spacing: 2px;
+              font-weight: bold;
+            }
+            
+            button:focus {
+                outline: none;
+                border: 2px solid #75eb97;
+                width: 50px;
+                border-left: 4px solid #85d288;
+                border-bottom: 4px solid #92de9b;
+                animation: spin 2s 500ms forwards;
+            }
+            
+            button:focus span {
+                color: transparent;
+            }
+            
+            button:focus svg {
+                animation: check 500ms 2300ms forwards;
+            }
+            
+            @keyframes spin {
+                80% {
+                    border: 4px solid transparent;
+                    border-left: 4px solid #70ca7f;
+                }
+                100% {
+                    transform: rotate(1080deg);
+                    border: 4px solid #7ce179;
+                }
+            }
+            
+            @keyframes check {
+                to {
+                    fill: #8eec8e;
+                }
+            }
+            
+            @keyframes circle {
+                to {
+                    border: 4px solid #aee38f;
+                color: rgb(153, 228, 141);
+                }
+            }
+            
+        </style>
+        </button>
+        
     </form>
   </div>
 

@@ -7,83 +7,116 @@
     <title>Design & Printer Hub</title>
     <link rel="stylesheet" href="frontpg.css">
     <link rel="stylesheet" href="gallery animi.css">
-    
+
     <script src="Interaction.js"></script>
     <!-- <script src="AI chat.js"></script> -->
 </head>
 
 <body>
-<!-- Header Section -->
-<header class="header">
-    <div class="navbar">
-    <!-- Menu Icon -->
-    <div class="menu-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="navbar">
+            <!-- Menu Icon -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-    <!-- Side Menu -->
-    <nav class="side-menu" id="sideMenu">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="/html folder/about/aboutpg.html/about.html">About</a></li>
-            <li><a href="#">Services</a></li>
-            <!-- <li><a href="#">Portfolio</a></li> -->
-            <li><a href="#">Contact us</a></li>
-        </ul>
-    </nav>
+            <!-- Side Menu -->
+            <nav class="side-menu" id="sideMenu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/html folder/about/aboutpg.html/about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <!-- <li><a href="#">Portfolio</a></li> -->
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </nav>
 
-    <!-- Logo -->
-    <div class="logo"></div>
+            <!-- Logo -->
+            <div class="logo"></div>
 
-    <!-- Top Navigation -->
-    <div class="top-nav">
-        <div class="container-gallery">
-            <img src="collection.png" alt="Collection">
-            <a href="#">PORTFOLIO</a>
-        </div>
-        <div class="container-collection">
-            <img src="order.png" alt="Products">
-            <a href="/html folder/js/productpage/prod.html">PRODUCTS</a>
-        </div>
-        <div class="container-help">
-            <img src="customer-service.png" alt="Help">
-            <a href="Contact.html">CONTACT US</a>
-        </div>
-        <!-- <div class="container-login">
+            <!-- Top Navigation -->
+
+            <div class="top-nav">
+                <div class="container-gallery">
+                    <img src="collection.png" alt="Collection">
+                    <a href="#">PORTFOLIO</a>
+                    <!-- Your hover trigger element here -->
+                    <div class="dropdown-content">
+                        <div class="image-slider">
+                            <div class="slides auto-slide">
+                                <div class="slide">
+                                    <img src="54iXYm2EQX1Ktgk1_BZfa_image.webp" alt="Slide 1">
+                                </div>
+                                <div class="slide">
+                                    <img src="0_flMOgUulgVZOTOwhO84_image.webp" alt="Slide 2">
+                                </div>
+                                <div class="slide">
+                                    <img src="eeSs4RJ_bwbnBOUX8cxev_image.webp" alt="Slide 3">
+                                </div>
+                                <div class="slide">
+                                    <img src="eyDQ2klQJqZYQt-yuAW6r_image.webp" alt="Slide 4">
+                                </div>
+                            </div>
+                            <div class="slider-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                            <div class="slide-controls">
+                                <button class="prev-slide">❮</button>
+                                <button class="next-slide">❯</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-content-inner">
+                            <a href="#" class="view-more">View More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-collection">
+                    <img src="order.png" alt="Products">
+                    <a href="/html folder/js/productpage/prod.html">PRODUCTS</a>
+                </div>
+                <div class="container-help">
+                    <img src="customer-service.png" alt="Help">
+                    <a href="Contact.html">CONTACT US</a>
+                </div>
+                <!-- <div class="container-login">
             <img src="enter.png" alt="Login">
             <a href="signup.html">LOGIN/SIGN IN</a>
         </div> -->
-        <div class="container-login" id="user-display">
-            <img src="enter.png" alt="Login">
-            <a href="signup.html">LOGIN/SIGN IN</a>
-        </div>
-        
-          
-          <script>
-            const userId = localStorage.getItem("user_id");
-            if (userId) {
-              const container = document.getElementById("login-section");
-              container.innerHTML = `
+                <div class="container-login" id="user-display">
+                    <img src="enter.png" alt="Login">
+                    <a href="signup.html">LOGIN/SIGN IN</a>
+                </div>
+
+                <script>
+                    const userId = localStorage.getItem("user_id");
+                    if (userId) {
+                        const container = document.getElementById("login-section");
+                        container.innerHTML = `
                 <img src="enter.png" alt="User">
                 <span>Welcome, ${userId}</span>
                 <button onclick="logout()">Logout</button>
               `;
-            }
-          
-            function logout() {
-              localStorage.removeItem("user_id");
-              window.location.reload();
-            }
-          </script>
-        <div class="container-cart">
-            <img src="shopping-cart.png" alt="Cart">
-            <a href="#">CART</a>
+                    }
+
+                    function logout() {
+                        localStorage.removeItem("user_id");
+                        window.location.reload();
+                    }
+                </script>
+                <div class="container-cart">
+                    <img src="shopping-cart.png" alt="Cart">
+                    <a href="#">CART</a>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</header>
+    </header>
 
 
     <!-- Hero Section -->
@@ -107,10 +140,10 @@
             <div class="category"><img src="M2kk0cjxKyPjuiXTFPrNr_image.webp" alt="Jungle Plants">
             </div>
             <div class="category"><img src="rPQxcW3a_x58d-2o9smJO_image.webp" alt="Outdoor Plants">
-                
+
             </div>
             <div class="category"><img src="Ua8Xv9i4m9fc-NR-TJ2JJ_image.webp" alt="Bedroom Plants">
-                
+
             </div>
         </div>
     </section>
@@ -119,29 +152,30 @@
     <section class="featured">
         <h2>Categories</h2>
         <p>"Print Beyond Ordinary – Make Every Detail Count!"</p>
-        
-            <div class="product-slider">
-                <div class="product"><img src="8PfVOSuS0ZDb7tGiN91PG_image.webp" alt="Product 1"></div>
-                <div class="product"><img src="sht.webp" alt="Product 2"></div>
-                <div class="product"><img src="TNPd7UM30Hv0M_1CbWg3j_image.webp" alt="Product 3"></div>
-                <div class="product"><img src="4l1Nfp5ok_MbC_Npc0R1u_image.webp" alt="Product 4"></div>
-                <!-- Duplicate images for seamless loop -->
-                <div class="product"><img src="1_yewhG9FjctQkmVMCadY_image.webp" alt="Product 1"></div>
-                <div class="product"><img src="SP2y0T8_l4QZN1s72iVUP_image.webp" alt="Product 1"></div>
-                <div class="product"><img src="ZrwQi02xWmSvZmHO5EcmX_image.webp" alt="Product 2"></div>
-                <div class="product"><img src="9Cxbq3HVLWIunNpy1Uj6s_image.webp" alt="Product 3"></div>
-                <div class="product"><img src="CocI59JrzyF6xBrFd7wXx_image.webp" alt="Product 4"></div>
-            </div>
-        </section>
+
+        <div class="product-slider">
+            <div class="product"><img src="8PfVOSuS0ZDb7tGiN91PG_image.webp" alt="Product 1"></div>
+            <div class="product"><img src="sht.webp" alt="Product 2"></div>
+            <div class="product"><img src="TNPd7UM30Hv0M_1CbWg3j_image.webp" alt="Product 3"></div>
+            <div class="product"><img src="4l1Nfp5ok_MbC_Npc0R1u_image.webp" alt="Product 4"></div>
+            <!-- Duplicate images for seamless loop -->
+            <div class="product"><img src="1_yewhG9FjctQkmVMCadY_image.webp" alt="Product 1"></div>
+            <div class="product"><img src="SP2y0T8_l4QZN1s72iVUP_image.webp" alt="Product 1"></div>
+            <div class="product"><img src="ZrwQi02xWmSvZmHO5EcmX_image.webp" alt="Product 2"></div>
+            <div class="product"><img src="9Cxbq3HVLWIunNpy1Uj6s_image.webp" alt="Product 3"></div>
+            <div class="product"><img src="CocI59JrzyF6xBrFd7wXx_image.webp" alt="Product 4"></div>
+        </div>
+    </section>
 
 
-        <section>
+    <section>
 
-        </section>
+    </section>
     <!-- Newsletter & Footer -->
     <section class="newsletter">
         <h2>Get 10% off your first order, Subscribe to our Newsletter</h2>
-        <input type="email" id="email" placeholder="Enter your email" style="width: 450px; height: 25px; padding: 5px; font-size: 16px;" required>
+        <input type="email" id="email" placeholder="Enter your email"
+            style="width: 450px; height: 25px; padding: 5px; font-size: 16px;" required>
 
         <a href="signup.html">
             <button style="width: 100px;">Subscribe</button>
@@ -151,11 +185,12 @@
     <footer class="foot">
         <div class="payment-methods">
             <p>Payment methods we accept:</p>
-            <img src="paypal.png" alt="Visa">
+            <img src="visa.png" alt="Visa">
             <img src="card.png" alt="Mastercard">
             <img src="express-delivery.png" alt="American Express">
             <img src="paypal.png" alt="PayPal">
-            <img src="https://tse1.mm.bing.net/th?id=OIP.FBEfSsV0dUdH7oWmH_jbfQHaE8&pid=Api&P=0&h=180" alt="Etisalat Walletr">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.FBEfSsV0dUdH7oWmH_jbfQHaE8&pid=Api&P=0&h=180"
+                alt="Etisalat Walletr">
             <!-- <img src="diners" alt="Diners Club"> -->
             <!-- <img src="jcb.png" alt="JCB"> -->
             <img src="credit-card.png" alt="UnionPay">
@@ -163,33 +198,12 @@
         </div>
         <p>Designed by Surya & Sarath</p>
         <hr> <!-- Horizontal line to separate sections -->
-    
+
         <p class="copyright">
             © 2013 - 2025 All Rights Reserved. Printful® Inc. 11025 Westlake Dr, Charlotte, North Carolina 28273
         </p>
     </footer>
 
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const user = localStorage.getItem("loggedInUser");
-            const userDisplay = document.getElementById("user-display");
-        
-            if (user) {
-                userDisplay.innerHTML = `
-                    <img src="user.png" alt="User" style="width: 40px; height: 40px; border-radius: 50%;">
-                    <span style="margin-left: 10px;">Welcome, ${user}</span>
-                    <button onclick="logout()" style="margin-left: 10px;">Logout</button>
-                `;
-            }
-        });
-        
-        function logout() {
-            localStorage.removeItem("loggedInUser");
-            window.location.reload();
-        }
-        </script>
-        
 
 </body>
 
