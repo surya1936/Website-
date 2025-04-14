@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALSAPPHIRE</title>
     <link rel="stylesheet" href="frontpg.css">
-    <!-- <link rel="stylesheet" href="gallery animi.css"> -->
+    <link rel="stylesheet" href="gallery animi.css">
     <link rel="stylesheet" href="login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="Interaction.js"></script>
+    <link rel="stylesheet" href="user.css">
 
-    <!-- <link rel="stylesheet" href="config.js"> -->
       <!-- <script src="AI chat.js"></script> -->
 </head>
 sc
@@ -92,8 +92,21 @@ sc
                 <div class="container-user-info" id="userInfo" style="color: white; font-weight: bold; margin-left: 20px;">
                     <!-- User info will be inserted here dynamically -->
                 </div>
-                 <!-- User Info Container -->
-                    
+                 <!-- User Info Container -->   
+                <!-- User Info Dropdown -->
+                <div class="user-dropdown">
+                    <img src="user.png" alt="user" id="userAvatar">
+                    <a href="#" id="productsLink">PRODUCTS</a>
+                    <div class="user-dropdown-content">
+                      <p id="dropdownUserName"></p>
+                      <p id="dropdownUserEmail"></p>
+                      <a href="logout.html" id="logoutBtn">Logout</a>  <!-- Changed from <p> to <a> -->
+                    </div>
+                  </div>
+                  
+                  
+            
+             </div>     
     </header>
 
 
@@ -182,112 +195,8 @@ sc
         </p>
     </footer>
 
-    <!-- Phone OTP Popup -->
-   <!-- Sign Up Form -->
-
-   <div class="container" id="signup">
-    <h1 class="form-title">Register</h1>
-    <form id="signUpForm">
-      <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
-      <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" id="fName" placeholder="First Name" required>
-        <label for="fName">First Name</label>
-      </div>
-      <div class="input-group">
-        <i class="fas fa-user"></i>
-        <input type="text" id="lName" placeholder="Last Name" required>
-        <label for="lName">Last Name</label>
-      </div>
-      <div class="input-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" id="rEmail" placeholder="Email" required>
-        <label for="rEmail">Email</label>
-      </div>
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="rPassword" placeholder="Password" required>
-        <label for="rPassword">Password</label>
-      </div>
-       <!-- reCAPTCHA widget -->
-  <!-- <div class="g-recaptcha" data-sitekey="6LfwmhcrAAAAAJ01UdSqSIHSCS0oe8DuMa20mBVb" ></div> -->
-      <button type="submit" class="btn" id="submitSignUp">Login up</button>
-    </form>
-
-
-    <p class="or">----------or--------</p>
-
-
-    <!-- In Sign Up form -->
-        <button id="googleSignInBtnUp" style="background: none; border: none; cursor: pointer;">
-            <i class="fab fa-google" style="font-size: 28px; color: #db4437;"></i>
-        </button>
-
-
-    <div class="links">
-      <p>Already Have an Account?</p>
-      <button id="signInButton" style="height: 2rem; width :80px;">Sign In</button>
-    </div>
-  </div>
-  
-<!-- Sign In Form -->
-<div class="container" id="signIn" style="display:none;">
-    <h1 class="form-title">Sign In</h1>
-    <form id="signInForm">
-      <div id="signInMessage" class="messageDiv" style="display:none;"></div>
-      
-      <div class="input-group">
-        <i class="fas fa-envelope"></i>
-        <input type="email" id="signInemail" placeholder="Email" required>
-        <label for="email">Email</label>
-      </div>
-      
-      <div class="input-group">
-        <i class="fas fa-lock"></i>
-        <input type="password" id="signInpassword" placeholder="Password" required>
-        <label for="password">Password</label>
-      </div>
-  
-      <!-- ✅ Add reCAPTCHA here -->
-      <div class="g-recaptcha" data-sitekey="6LfwmhcrAAAAAJ01UdSqSIHSCS0oe8DuMa20mBVb" ></div>
-
-  
-      <p class="recover"><a href="#">Recover Password</a></p>
-      <button type="submit" class="btn" id="submitSignIn">Login</button>
-    </form>
-  
-    <p class="or">----------or--------</p>
-
-   <!-- In Sign In form -->
-   <div id="signInMessage" style="display: none; color: green; font-weight: bold;"></div>
-<button id="googleSignInBtnIn" style="background: none; border: none; cursor: pointer;">
-    <i class="fab fa-google" style="font-size: 28px; color: #db4437;"></i>
-  </button>
-      
-  
-    <div class="links">
-      <p>Don't have an account yet?</p>
-      <button id="signUpButton" style="height: 2rem; width :80px;">Sign Up</button>
-    </div>
-  </div>
-  
-      
-  <!-- Your main script (place below Firebase SDK) -->
-  <script type="module" src="index.js"></script>
-  <script type="module" src="firebaseauth.js"></script>
-  <script type="module" src="Interaction.js"></script>
-  <!-- <script type="module" src="google-auth.js"></script> -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
- <!-- Firebase and EmailJS Scripts -->
- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
- <script type="module">
-    // Import Firebase modules
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-    import { getAuth } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore.js";
- </script>
-  
+ <script  src="firebaseauth.js"></script>
+ <script  src="user-dropdown.js"></script>
 </body>
 
 </html>

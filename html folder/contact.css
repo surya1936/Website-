@@ -1,4 +1,14 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap') ;
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap") ;
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap") ;
+@import url("https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Tektur:wght@400..900&display=swap") ;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap") ;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Teko:wght@300..700&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap") ;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Teko:wght@300..700&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap") ;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cookie&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Rochester&family=Teko:wght@300..700&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap") ;
+* 
+
+{
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
   }
@@ -23,6 +33,7 @@
   
   h2 {
     text-align: center;
+    font-family: 'Montserrat';
     margin-bottom: 1.5rem;
     color: #333;
   }
@@ -91,4 +102,27 @@
     margin-top: 0.3rem;
     display: none;
   }
+  
+
+  /* Background watermark */
+
+  .watermark-container {
+    background-image: url('PHOTO-2025-04-09-10-21-42.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.1; /* watermark fade effect */
+    padding-left: 100px;
+  }
+  
+  .watermark-text {
+    font-size: 15px;
+    color: black;
+    opacity: 1; /* make sure text is fully visible */
+  }
+  
   

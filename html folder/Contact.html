@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Responsive Contact Form</title>
-  <link rel="stylesheet" href="contact.css"/>
-
+  <link rel="stylesheet" href="contact.css" />
 </head>
+
 <body>
-    
-    <div id="#background-container" class="background-container">
-        <div id="background-1" class="background-1"></div>
-        <div id="background-2" class="background-2"></div>
-     </div>
-     
-      
+
+  <div id="#background-container" class="background-container">
+    <div id="background-1" class="background-1"></div>
+    <div id="background-2" class="background-2"></div>
+  </div>
+
+  <div class="watermark-container">
+    <img src="PHOTO-2025-04-09-10-21-42.jpg" alt="Watermark" class="watermark" style="position: absolute;" />
+  </div>
+
   <div class="form-container">
     <h2>Contact Us</h2>
-    <form id="contactForm">
+    <form id="contactForm" action="https://submit-form.com/yH8z5HBVQ" method="POST">
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" required />
+        <input type="text" id="name" name="name" required />
         <small class="error-message"></small>
       </div>
       <div class="form-group">
         <label for="phone">Phone</label>
         <div class="phone-input">
-          <!-- <label for="countryCode">Country Code</label> -->
-          <select id="countryCode">
+          <select id="countryCode" name="countryCode">
             <option value="+1">+1 (US/Canada)</option>
             <option value="+44">+44 (UK)</option>
             <option value="+91" selected>+91 (India)</option>
@@ -77,114 +80,69 @@
             <option value="+213">+213 (Algeria)</option>
             <option value="+216">+216 (Tunisia)</option>
             <option value="+509">+509 (Haiti)</option>
+            <!-- ... other options omitted for brevity ... -->
+            <option value="+509">+509 (Haiti)</option>
           </select>
-          <input type="tel" id="phone" required />
+          <input type="tel" id="phone" name="phone" required />
         </div>
         <small class="error-message"></small>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" required />
+        <input type="email" id="email" name="email" required />
         <small class="error-message"></small>
       </div>
       <div class="form-group">
         <label for="message">Message</label>
-        <textarea id="message" rows="5" required></textarea>
+        <textarea id="message" name="message" rows="5" required></textarea>
         <small class="error-message"></small>
       </div>
-      <button class="noselect">
+      <button class="noselect" type="submit">
         <span>Submit</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z" />
         </svg>
         <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            
-            body {
-                height: 100vh;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #fff;
-            }
-            
-            button {
-                width: 150px;
-                height: 50px;
-                background: none;
-                border: 4px solid #607b63;
-                border-radius: 50px;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                transition: 100ms;
-            }
-            
-            span,
-            svg {
-                position: absolute;
-                color: #000000;
-                fill: transparent;
-                text-transform: uppercase;
-                
-                letter-spacing: 2px;
-              font-weight: bold;
-            }
-            
-            button:focus {
-                outline: none;
-                border: 2px solid #75eb97;
-                width: 50px;
-                border-left: 4px solid #85d288;
-                border-bottom: 4px solid #92de9b;
-                animation: spin 2s 500ms forwards;
-            }
-            
-            button:focus span {
-                color: transparent;
-            }
-            
-            button:focus svg {
-                animation: check 500ms 2300ms forwards;
-            }
-            
-            @keyframes spin {
-                80% {
-                    border: 4px solid transparent;
-                    border-left: 4px solid #70ca7f;
-                }
-                100% {
-                    transform: rotate(1080deg);
-                    border: 4px solid #7ce179;
-                }
-            }
-            
-            @keyframes check {
-                to {
-                    fill: #8eec8e;
-                }
-            }
-            
-            @keyframes circle {
-                to {
-                    border: 4px solid #aee38f;
-                color: rgb(153, 228, 141);
-                }
-            }
-            
-        </style>
-        </button>
-        
-    </form>
-  </div>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
 
-  <script src="contact.js"></script>
-  <!-- <script src="contactbg.js"></script> -->
-</body>
-</html>
+          body {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+          }
+
+          button {
+            width: 150px;
+            height: 50px;
+            background: none;
+            border: 4px solid #607b63;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 100ms;
+          }
+
+          span,
+          svg {
+            position: absolute;
+            color: #000000;
+            fill: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+          }
+
+          button:focus {
+            outline: none;
+            border: 2px solid #75eb97;
+            width: 50

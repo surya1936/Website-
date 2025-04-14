@@ -1,0 +1,28 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .watermark-container {
+    position: relative;
+    height: 100vh;
+    background: url('PHOTO-2025-04-09-10-21-42.jpg') center center no-repeat;
+    background-size: 50%;
+    background-attachment: fixed;
+    opacity: 0.1; /* Adjust opacity for watermark effect */
+    z-index: -1;
+  }
+  
+  /* Foreground content */
+  .watermark-container h1,
+  .watermark-container p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    color: #000;
+    text-align: center;
+    z-index: 1;
+  }
+  
